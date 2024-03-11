@@ -152,5 +152,106 @@ html {
         }
     }
 
+    & main {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-size-size-15);
+        
+        & .inicio {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("../img/Desktop/background_inicio.avif");
+            background-size: cover;
+            color: var(--color-basico-color-blanco-2);
+            display: grid;
+            grid-template-rows: 80px 1fr auto;
+            grid-template-columns: 1fr calc(100vw - 384px) 1fr;
+            gap: var(--spacing-size-size-5);
 
+            & .introduccion {
+                grid-row: 2/3;
+                grid-column: 2/3;
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-size-size-5);
+
+                & .introduccion__titulo {
+                    font-family: "advent_probold", sans-serif;
+                    margin: 0;
+                    font-size: 80px;
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                }
+
+                & .introduccion__subtitulo {
+                    font-size: var(--spacing-size-size-9); /* 48px */
+                }
+
+                & .introduccion__descuento {
+                    max-width: 450px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: var(--spacing-size-size-9); /* 24px */
+                    background-color: var(--color-background-color-bg-descuento);
+                    padding: var(--spacing-size-size-2) 0; /* 8px */
+                    border-radius: var(--spacing-size-size-3); /* 12px */
+                    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+                    gap: var(--spacing-size-size-4); /* 16px */
+
+                    img {
+                        width: var(--spacing-size-size-12); /* 48px */
+                    }
+                }
+
+                & .introduccion__contador {
+                    display: flex;
+                    gap: 20px;
+                    font-size: var(--spacing-size-size-15); /* 60px */
+                    color: var(--color-basico-color-negro-2);
+
+                    & .contador__num {
+                        color: var(--color-basico-color-blanco-2);
+                        padding: var(--spacing-size-size-2); /* 8px */
+                        background-color: var(--color-iconos-color-logo);
+                        border-radius: var(--spacing-size-size-2); /* 8px */
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    }
+                }
+            }
+
+            & .flecha {
+                grid-row: 3/4;
+                grid-column: 1/4;
+                display: flex;
+                justify-self: center;
+                align-self: flex-end;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            & .flecha:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        & .explicacion {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: var(--spacing-size-size-10); /* 40px */
+
+            & .explicacion__titulo {
+                font-size: var(--spacing-size-size-9); /* 36px */  
+            }
+
+            & .explicacion__parrafo {
+                width: 50vw;
+                font-family: "Times New Roman", Times, serif;
+                font-weight: 400;
+                font-size: var(--spacing-size-size-5); /* 20px */
+            }
+        }
+    }
 }
