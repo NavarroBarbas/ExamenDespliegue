@@ -6,8 +6,7 @@
     <meta name="description" content="Proyecto Perfecto">
     <meta name="keywords" content="Proyecto, Perfecto">
     <meta name="author" content="Javier Navarro">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="svg/logo de diseño.svg" type="image/x-icon" />
     <title>BetterDesigns</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/script.js"></script>
@@ -21,7 +20,21 @@
             </a>
             <nav class="header__nav">
                 <a class="nav__iniciosesion">Iniciar Sesión</a>
-                <a class="nav__registrarse">Registrarse</a>
+                <a class="nav__registrarse" id="registroclick" onclick="openOverlay(event)">Registrarse</a>
+                
+                <div id="registro" class="overlay" onclick="closeOverlay(event)">
+                    <section class="overlay__box">                
+                        <form class="box__form" method="POST">
+                            <h4 class="form__titulo">Regístrate</h4>
+                            <input class="input" type="email" id="email-registro" name="emailregistro" placeholder="Email">
+                            <input class="input" type="password" id="pass-registro" name="passregistro" placeholder="Contraseña">
+                            <input class="input" type="password" id="pass_verify" name="passverify" placeholder="Confirmar Contraseña">
+                            <input class="botonenviar" type="submit" value="Enviar">
+                        </form>
+
+                        <img src="img/Desktop/Diseñografico.avif" alt="Diseño Gráfico Register">
+                    </section>
+                </div>
             </nav>
         </header>
 
@@ -48,7 +61,54 @@
                 <h2 class="explicacion__titulo">Cursos de Diseño Online</h2>
                 <p class="explicacion__parrafo">Bienvenido a BetterDesigns, el lugar perfecto para aprender diseño de manera online. Nuestros cursos te brindarán los conocimientos necesarios para convertirte en un experto en diseño. <b>¡Inscríbete ahora!</b></p>
             </section>
+
+            <section class="cursos">
+                <div class="cursos__curso">
+                    <section class="curso__texto">
+                        <h2 class="texto__titulo">Diseño UX/UI</h2>
+                        <p class="texto__parrafo">Lorem ipsum dolor sit amet consectetur. Ipsum nunc tortor ultricies felis diam sit varius ipsum. Ultrices porta vulputate scelerisque morbi gravida molestie proin a. Euismod dictum leo id commodo sapien purus velit. Senectus elementum dignissim faucibus duis habitant fermentum. Quis aliquet tincidunt integer etiam vestibulum nisl maecenas. Nulla interdum massa sit nulla amet laoreet non lectus nunc. Dignissim euismod aliquet ac tempor.</p>
+                        <div class="texto__datos">
+                            <h4 class="datos__horas">10h</h4>
+                            <h4 class="datos__precio">99€ <img src="svg/icon-park-solid_buy.svg"></h4>
+                        </div>
+                    </section>
+                    <img class="curso__imagen" src="img/Desktop/Diseño UXUI.avif" alt="Curso Diseño">
+                </div>
+                <div class="cursos__curso">
+                    <section class="curso__texto">
+                        <h2 class="texto__titulo">Curso de Diseño</h2>
+                        <p class="texto__parrafo">Lorem ipsum dolor sit amet consectetur. Ipsum nunc tortor ultricies felis diam sit varius ipsum. Ultrices porta vulputate scelerisque morbi gravida molestie proin a. Euismod dictum leo id commodo sapien purus velit. Senectus elementum dignissim faucibus duis habitant fermentum. Quis aliquet tincidunt integer etiam vestibulum nisl maecenas. Nulla interdum massa sit nulla amet laoreet non lectus nunc. Dignissim euismod aliquet ac tempor.</p>
+                        <div class="texto__datos">
+                            <h4 class="datos__horas">10h</h4>
+                            <h4 class="datos__precio">99€ <img src="svg/icon-park-solid_buy.svg"></h4>
+                        </div>
+                    </section>
+                    <img class="curso__imagen" src="img/Desktop/Diseño UXUI-1.avif" alt="Curso Diseño">
+                </div>
+            </section>
         </main>
+
+        <footer>
+            <nav class="footer__links">
+                <a>Contacto</a>
+                <a>Política de Privacidad</a>
+                <a>Cookies</a>
+            </nav>
+
+            <nav class="footer__redes">
+                <a href="https://www.facebook.com">
+                    <img src="svg/uil_facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com">
+                    <img src="svg/ri_instagram-fill.svg" alt="Instagram">
+                <a href="https://www.twitter.com">
+                    <img src="svg/bi_twitter.svg" alt="Twitter">
+                </a>
+                <a href="https://www.gmail.com">
+                    <img src="svg/material-symbols_mail.svg" alt="Mail">
+                </a>
+            </nav>
+        </footer>
     </div>
 </body>
 </html>
