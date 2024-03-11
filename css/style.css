@@ -1,1 +1,156 @@
 @import url(normalize.min.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'advent_prolight';
+    src: url('../fonts/adventpro-light-webfont.woff2') format('woff2'),
+        url('../fonts/adventpro-light-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'advent_promedium';
+    src: url('../fonts/adventpro-medium-webfont.woff2') format('woff2'),
+        url('../fonts/adventpro-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'advent_proregular';
+    src: url('../fonts/adventpro-regular-webfont.woff2') format('woff2'),
+        url('../fonts/adventpro-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'advent_prosemibold';
+    src: url('../fonts/adventpro-semibold-webfont.woff2') format('woff2'),
+        url('../fonts/adventpro-semibold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'advent_probold';
+    src: url('../fonts/adventpro-bold-webfont.woff2') format('woff2'),
+        url('../fonts/adventpro-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'advent_proextralight';
+    src: url('../fonts/adventpro-extralight-webfont.woff2') format('woff2'),
+        url('../fonts/adventpro-extralight-webfont.woff') format('woff');
+}
+
+:root {
+    /* Mode 1 */
+    /* colors */
+    --color-amarillento-color-amarillento-1: #fef7c1;
+    --color-amarillento-color-amarillento-2: #fce42e;
+    --color-amarillento-color-amarillento-3: #938202;
+    --color-azul-oscuro-color-azul-oscuro-1: #0f1317;
+    --color-azul-oscuro-color-azul-oscuro-2: #1e252e;
+    --color-azul-oscuro-color-azul-oscuro-3: #2d3845;
+    --color-basico-color-blanco-1: #ffffff;
+    --color-basico-color-blanco-2: #ececec;
+    --color-basico-color-negro-1: #000000;
+    --color-basico-color-negro-2: #272727;
+    --color-basico-color-negro-3: #424242;
+    --color-basico-color-negro-4: #626262;
+    /* numbers */
+    /* spacing */
+    --spacing-size-size-1: 0.25rem; /* 4px */
+    --spacing-size-size-2: 0.5rem; /* 8px */
+    --spacing-size-size-3: 0.75rem; /* 12px */
+    --spacing-size-size-4: 1rem; /* 16px */
+    --spacing-size-size-5: 1.25rem; /* 20px */
+    --spacing-size-size-6: 1.5rem; /* 24px */
+    --spacing-size-size-7: 1.75rem; /* 28px */
+    --spacing-size-size-8: 2rem; /* 32px */
+    --spacing-size-size-9: 2.25rem; /* 36px */
+    --spacing-size-size-10: 2.5rem; /* 40px */
+    --spacing-size-size-11: 2.75rem; /* 44px */
+    --spacing-size-size-12: 3rem; /* 48px */
+    --spacing-size-size-13: 3.25rem; /* 52px */
+    --spacing-size-size-14: 3.5rem; /* 56px */
+    --spacing-size-size-15: 3.75rem; /* 60px */
+
+    /* Mode 1 */
+    /* colors */
+    --color-background-color-bg-card: #ffffff59;
+    --color-background-color-bg-descuento: #196f79;
+    --color-background-color-bg-descuento-2: #2d3845;
+    --color-background-color-bg-header: #00000073;
+    --color-background-color-bg-page: var(--color-basico-color-blanco-2);
+    --color-background-color-bg-registro: var(--color-botones-color-boton-3);
+    --color-botones-color-boton-1: var(--color-amarillento-color-amarillento-1);
+    --color-botones-color-boton-2: var(--color-amarillento-color-amarillento-2);
+    --color-botones-color-boton-3: var(--color-azul-oscuro-color-azul-oscuro-3);
+    --color-botones-color-boton-4: #5dbc89;
+    --color-botones-color-boton-5: #458c6b;
+    --color-iconos-color-icono-card: var(--color-amarillento-color-amarillento-1);
+    --color-iconos-color-icono-menu: var(--color-basico-color-blanco-2);
+    --color-iconos-color-logo: #5dbc89;
+    /* numbers */
+    --size-grid-grid-gap: 1rem; /* 16px */
+    --size-grid-grid-paddingtop: 1rem; /* 16px */
+    --size-grid-grid-padding-horizontal: 12rem; /* 192px */
+}
+
+html {
+    overflow-x: hidden;
+    font-family: "advent_proregular", sans-serif;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--color-background-color-bg-page);
+
+    & header {
+        position: fixed;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--size-grid-grid-paddingtop) var(--size-grid-grid-padding-horizontal);/* 16px 192px */
+        background: var(--color-background-color-bg-header);
+        color: var(--color-basico-color-blanco-2);
+
+        & .header__botoninicio {
+            text-decoration: none;
+            color: var(--color-basico-color-blanco-2);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-size-size-5);
+            font-family: "advent_prosemibold", sans-serif;
+            cursor: pointer;
+        }
+
+        & .header__nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 78px;
+
+            & .nav__iniciosesion {
+                cursor: pointer;
+            }
+
+            & .nav__registrarse {
+                padding: 12px 28px;
+                background-color: var(--color-botones-color-boton-4);
+                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+                border-radius: 28px;
+                cursor: pointer;
+            }
+
+            & .nav__registrarse:hover {
+                background-color: var(--color-botones-color-boton-5);
+            }
+        }
+    }
+
+
+}
