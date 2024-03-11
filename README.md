@@ -10,9 +10,9 @@ Página principal para la inscripción de cursos web sobre diseño.
 
 
 ## 🔗 Links
-GitHub Page:
+GitHub Page: https://navarrobarbas.github.io/ExamenDespliegue/
 
-Netlify:
+Netlify: https://examendesplieguejaviernavarro.netlify.app/
 ## Color Reference
 
 | Color             | Hex                                                                |
